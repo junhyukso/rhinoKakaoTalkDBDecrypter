@@ -5,7 +5,7 @@ rhinoKakaoTalkDBDecrypter
 
 function | return | description
 --- | --- | ---
-deriveKey(number userId,number encType)| UnsignedByte[] key | generate AES key for KakaoTalkDB from userId and encType. Using cache for key is highly recommended.
+deriveKey(number userId,number encType)| UnsignedByte[] key | generate AES key for KakaoTalkDB from userId and encType.
 decrypt(UnsignedByte[] key, String encrypted) | String decrypted | decrypt encrypted text by using key from deriveKey()
 
 ## userId for data
