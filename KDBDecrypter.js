@@ -113,4 +113,4 @@ function decrypt(key,b64CipherText){
     var decrypted = b64AESDecrypt(toJavaByteArr(key),toJavaByteArr(iv),b64CipherText)
     return String(new java.lang.String(decrypted, "utf-8"));
 }
-module.export.key = key
+module.export.decrypt = decrypt
