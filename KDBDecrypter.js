@@ -1,3 +1,4 @@
+
 function toJavaByteArr(arr){
     var B = java.lang.reflect.Array.newInstance(java.lang.Byte.TYPE, arr.length);
     for(var i=0;i<arr.length;i++){
@@ -42,7 +43,7 @@ function adjust (a,aOff,b){
 }
 
 function deriveKey(userId,encType){
-    var salt = genSalt(encType)
+    var salt = genSalt(userId,encType)
     var password = [0,22,0,8,0,9,0,111,0,2,0,23,0,43,0,8,0,33,0,33,0,10,0,16,0,3,0,3,0,7,0,6,0,0]
     var iterations = 2;
     var dkeySize = 32;
@@ -96,7 +97,7 @@ function deriveKey(userId,encType){
 
     return dKey
 }
-module.export.deriveKey = deriveKey
+module.exports.deriveKey = deriveKey
 
 function b64AESDecrypt(key,iv,encrypted){
     encrypted = android.util.Base64.decode(encrypted,0);
@@ -109,8 +110,7 @@ function b64AESDecrypt(key,iv,encrypted){
 
 function decrypt(key,b64CipherText){
     var iv = [15,8,1,0,25,71,37,220,21,245,23,224,225,21,12,53];
-    key = deriveKey(salt);
     var decrypted = b64AESDecrypt(toJavaByteArr(key),toJavaByteArr(iv),b64CipherText)
     return String(new java.lang.String(decrypted, "utf-8"));
 }
-module.export.decrypt = decrypt
+module.exports.decrypt = decrypt
