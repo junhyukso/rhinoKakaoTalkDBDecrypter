@@ -13,4 +13,4 @@ decrypt(UnsignedByte[] key, String encrypted) | String decrypted | decrypt encry
 table|  userId | encType
 ---|---|---
 chat_logs  |COLUMM 'user_id' of each row  | see COLUMM 'v'  of each row
-friends| COLUMM 'user_id' of TABLE 'open_profile' or (SELECT id FROM frindes WHERE _id = 2) | COLUMM 'enc' of each row
+friends| COLUMM 'user_id' of TABLE 'open_profile' or (SELECT id FROM friendes WHERE _id = 2) | COLUMM 'enc' of each row
