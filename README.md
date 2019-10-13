@@ -1,6 +1,7 @@
 # rhinoKakaoTalkDBDecrypter
 rhinoKakaoTalkDBDecrypter
 
+KDBDecrypter is main code.
 KDBManager is usage example.
 
 ## Functions
