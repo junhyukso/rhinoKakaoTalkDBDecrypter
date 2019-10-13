@@ -1,6 +1,8 @@
 # rhinoKakaoTalkDBDecrypter
 rhinoKakaoTalkDBDecrypter
 
+KDBManager is usage example.
+
 ## Functions
 
 function | return | description
