@@ -2,6 +2,17 @@
 var KakaoDecrypter = require("KDBDecrypter.js")
 var Utils = require("Utils.js")
 
+function readInputStream(is) {
+    var br = new java.io.BufferedReader(new java.io.InputStreamReader(is));
+    var readStr = "";
+    var str = null;
+    while (((str = br.readLine()) != null)) {
+        readStr += str + "\n";
+    }
+    br.close();
+    return readStr.trim();
+}
+
 function cmd(dir) {
     var p = java.lang.Runtime.getRuntime().exec("su -c \"\"" + dir + "\"\"");
     p.waitFor();
