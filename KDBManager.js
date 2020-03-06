@@ -2,11 +2,18 @@
 var KakaoDecrypter = require("KDBDecrypter.js")
 var Utils = require("Utils.js")
 
+function cmd(dir) {
+    var p = java.lang.Runtime.getRuntime().exec("su -c \"\"" + dir + "\"\"");
+    p.waitFor();
+    var r = p.getInputStream() || p.getErrorStream();
+    return readInputStream(r);
+}
+
 var myIdCache = {}
 var keyCache = {}
 
 /*grant Permisson*/
-Utils.cmd("chmod -R 777 /data/data/com.kakao.talk/databases")
+cmd("chmod -R 777 /data/data/com.kakao.talk/databases")
 var DB1 = android.database.sqlite.SQLiteDatabase.openDatabase("/data/data/com.kakao.talk/databases/KakaoTalk.db", null, 1)
 var DB2 = android.database.sqlite.SQLiteDatabase.openDatabase("/data/data/com.kakao.talk/databases/KakaoTalk2.db", null, 1)
 
