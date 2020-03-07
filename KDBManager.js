@@ -1,6 +1,5 @@
 //DBresponder
 var KakaoDecrypter = require("KDBDecrypter.js")
-var Utils = require("Utils.js")
 
 function readInputStream(is) {
     var br = new java.io.BufferedReader(new java.io.InputStreamReader(is));
