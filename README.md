@@ -5,8 +5,10 @@ _working on 2020.08.28
 
 - Update : 2020:08.28
   - new key 'extr.ursra' added.
-  - Kakaotalk started to use JNI. 
-  - see libdream.so -> Java_com_kakao_talk_dream_Projector_incept
+  - From 9.0.0 , Kakaotalk started to use JNI to generate key. 
+  - see
+    - com.kakao.talk.util.DataBaseResourceCrypto
+    - libdream.so -> Java_com_kakao_talk_dream_Projector_incept
 
 ## Functions
 
