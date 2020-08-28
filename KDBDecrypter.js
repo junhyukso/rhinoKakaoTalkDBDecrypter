@@ -26,7 +26,7 @@ function genSalt(userId, encType) {
         return '\0'.repeat(16)
     }
     //see com.kakao.talk.util.DataBaseResourceCrypto
-    var prefixes = ['', '', '12', '24', '18', '30', '36', '12', '48', '7', '35', '40', '17', '23', '29', 'isabel', 'kale', 'sulli', 'van', 'merry', 'kyle', 'james', 'maddux', 'tony', 'hayden', 'paul', 'elijah', 'dorothy', 'sally','bran']
+    var prefixes = ['', '', '12', '24', '18', '30', '36', '12', '48', '7', '35', '40', '17', '23', '29', 'isabel', 'kale', 'sulli', 'van', 'merry', 'kyle', 'james', 'maddux', 'tony', 'hayden', 'paul', 'elijah', 'dorothy', 'sally','bran','extr.ursra']
     var salt = (prefixes[encType] + userId).slice(0, 16)
     salt = salt + '\0'.repeat(16 - salt.length)
     return new java.lang.String(salt).getBytes("UTF-8").slice()
