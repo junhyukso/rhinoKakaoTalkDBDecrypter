@@ -1,7 +1,11 @@
 # rhinoKakaoTalkDBDecrypter
 rhinoKakaoTalkDBDecrypter
 
-_working on 2020.03.26_
+_working on 2020.08.28
+
+#Update : 2020:08.28
+new key 'extr.ursra' added.
+Kakaotalk started to use JNI. see libdream.so -> Java_com_kakao_talk_dream_Projector_incept
 
 ## Functions
 
